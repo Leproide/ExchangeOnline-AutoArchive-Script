@@ -76,7 +76,7 @@ Option `7` accepts any integer from 1 to 99 years and calculates the days automa
 
 ---
 
-## 📦 Exchange Online – Archive Mailbox License Compatibility
+## 📦 Archive Mailbox License Compatibility
 
 | License | In-Place Archive | Primary Mailbox | Archive (base) | Native Auto-Expanding | With Add-on |
 |---|:---:|:---:|:---:|:---:|---|
