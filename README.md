@@ -1,4 +1,4 @@
-# exo-archiver
+# Exchange Online AutoArchiver
 
 Interactive PowerShell script to enable and configure the In-Place Archive on Exchange Online, set a retention policy and immediately trigger archiving, no manual cmdlets needed.
 
