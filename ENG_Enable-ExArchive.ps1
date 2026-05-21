@@ -1,10 +1,10 @@
 #Requires -Version 5.1
 <#
 .LINK
-https://github.com/Leproide/ExchangeOnline-AutoArchive-Script
+	GitHub Repo: https://github.com/Leproide/ExchangeOnline-AutoArchive-Script
 
 .NOTES
-GPL v3 https://www.gnu.org/licenses/gpl-3.0.html
+	License: GPL v3 https://www.gnu.org/licenses/gpl-3.0.html
 
 .SYNOPSIS
     Enables the Exchange Online archive, sets the retention policy and starts archiving for a user.
