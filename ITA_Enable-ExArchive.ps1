@@ -1,10 +1,11 @@
 #Requires -Version 5.1
 <#
-.GitHub
+.GITHUB
 https://github.com/Leproide/ExchangeOnline-AutoArchive-Script
 
 .LICENSE
 GPL v3 https://www.gnu.org/licenses/gpl-3.0.html
+
 
 .SYNOPSIS
     Abilita l'archivio online Exchange, imposta la retention policy e avvia l'archiviazione per un utente.
@@ -105,13 +106,18 @@ try {
 # ---------------------------------------------------------------------------
 
 Write-Step "Abilitazione Auto-Expanding Archive a livello organizzazione..."
-try {
-    Set-OrganizationConfig -AutoExpandingArchive -ErrorAction Stop
-    Write-OK "Auto-Expanding Archive abilitato a livello organizzazione."
-} catch {
-    Write-Fail "Impossibile abilitare Auto-Expanding Archive a livello organizzazione: $_"
-    Disconnect-ExchangeOnline -Confirm:$false -ErrorAction SilentlyContinue | Out-Null
-    exit 1
+$orgCfgCheck = Get-OrganizationConfig
+if ($orgCfgCheck.AutoExpandingArchiveEnabled) {
+    Write-Info "Auto-Expanding Archive gia' abilitato a livello organizzazione, step saltato."
+} else {
+    try {
+        Set-OrganizationConfig -AutoExpandingArchive -ErrorAction Stop
+        Write-OK "Auto-Expanding Archive abilitato a livello organizzazione."
+    } catch {
+        Write-Fail "Impossibile abilitare Auto-Expanding Archive a livello organizzazione: $_"
+        Disconnect-ExchangeOnline -Confirm:$false -ErrorAction SilentlyContinue | Out-Null
+        exit 1
+    }
 }
 
 Write-Step "Verifica Auto-Expanding Archive a livello organizzazione..."
