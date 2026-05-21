@@ -1,6 +1,6 @@
 # exo-archiver
 
-Interactive PowerShell script to enable and configure the In-Place Archive on Exchange Online, set a retention policy and immediately trigger archiving — no manual cmdlets needed.
+Interactive PowerShell script to enable and configure the In-Place Archive on Exchange Online, set a retention policy and immediately trigger archiving, no manual cmdlets needed.
 
 ---
 
@@ -24,7 +24,7 @@ Install-Module -Name ExchangeOnlineManagement -Scope CurrentUser
 .\Enable-ExArchive_Custom.ps1
 ```
 
-Fully interactive — no parameters required.
+Fully interactive, no parameters required.
 
 ---
 
@@ -119,15 +119,15 @@ Get-MailboxFolderStatistics user@domain.com -Archive | ft Name,ItemsInFolder,Fol
 | Large mailboxes (50 GB+) | up to 24 hours |
 | Subsequent runs | automatic Microsoft cycles |
 
-The process is entirely **server-side** — Outlook or OWA do not need to be open.
+The process is entirely **server-side** Outlook or OWA do not need to be open.
 
 ---
 
 ## Notes
 
-- Archiving is **one-way** — mail moved to the archive does not return to the inbox if the policy is changed
+- Archiving is **one-way** mail moved to the archive does not return to the inbox if the policy is changed
 - Changing the threshold on an already configured mailbox only affects future archiving; mail already archived remains untouched
-- There is no visible MRM queue — the Managed Folder Assistant runs in silent batches
+- There is no visible MRM queue the Managed Folder Assistant runs in silent batches
 
 ---
 
