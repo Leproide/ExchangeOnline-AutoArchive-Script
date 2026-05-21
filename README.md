@@ -21,7 +21,11 @@ Install-Module -Name ExchangeOnlineManagement -Scope CurrentUser
 ## Usage
 
 ```powershell
-.\Enable-ExArchive_Custom.ps1
+.\ITA_Enable-ExArchive.ps1
+```
+Or
+```powershell
+.\ENG_Enable-ExArchive.ps1
 ```
 
 Fully interactive, no parameters required.
