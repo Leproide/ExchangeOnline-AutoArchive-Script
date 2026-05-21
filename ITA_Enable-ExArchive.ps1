@@ -1,5 +1,11 @@
 #Requires -Version 5.1
 <#
+.GitHub
+https://github.com/Leproide/ExchangeOnline-AutoArchive-Script
+
+.LICENSE
+GPL v3 https://www.gnu.org/licenses/gpl-3.0.html
+
 .SYNOPSIS
     Abilita l'archivio online Exchange, imposta la retention policy e avvia l'archiviazione per un utente.
 
