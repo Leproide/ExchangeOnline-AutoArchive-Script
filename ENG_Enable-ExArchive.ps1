@@ -1,9 +1,9 @@
 #Requires -Version 5.1
 <#
-.GITHUB
+.LINK
 https://github.com/Leproide/ExchangeOnline-AutoArchive-Script
 
-.LICENSE
+.NOTES
 GPL v3 https://www.gnu.org/licenses/gpl-3.0.html
 
 .SYNOPSIS
