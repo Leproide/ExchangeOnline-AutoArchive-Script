@@ -76,23 +76,28 @@ Option `7` accepts any integer from 1 to 99 years and calculates the days automa
 
 ---
 
-## License compatibility
+## 📦 Exchange Online – Archive Mailbox License Compatibility
 
-| License | In-Place Archive | Base storage | Native auto-expanding | With add-on |
-|---|---|---|---|---|
-| Exchange Online Plan 1 | ✅ YES | ~50 GB | ❌ NO | ✅ 100 GB + auto-expanding (~1.5 TB) |
-| Exchange Online Plan 2 | ✅ YES | 100 GB | ✅ YES | — |
-| M365 Business Basic | ✅ YES | ~50 GB | ❌ NO | ✅ 100 GB + auto-expanding |
-| M365 Business Standard | ✅ YES | ~50 GB | ❌ NO | ✅ 100 GB + auto-expanding |
-| M365 Business Premium | ✅ YES | 100 GB | ✅ YES | — |
-| M365 E1 | ✅ YES | ~50 GB | ❌ NO | ✅ 100 GB + auto-expanding |
-| M365 E3 | ✅ YES | 100 GB | ✅ YES | — |
-| M365 E5 | ✅ YES | 100 GB | ✅ YES | — |
-| Office 365 E1 | ✅ YES | ~50 GB | ❌ NO | ✅ 100 GB + auto-expanding |
-| Office 365 E3 | ✅ YES | 100 GB | ✅ YES | — |
-| Office 365 E5 | ✅ YES | 100 GB | ✅ YES | — |
+| License | In-Place Archive | Primary Mailbox | Archive (base) | Native Auto-Expanding | With Add-on |
+|---|:---:|:---:|:---:|:---:|---|
+| Exchange Online Plan 1 | ✅ | 50 GB | 50 GB | ❌ | ✅ up to 1.5 TB |
+| Exchange Online Plan 2 | ✅ | 100 GB | 100 GB → 1.5 TB | ✅ | — |
+| M365 Business Basic | ✅ | 50 GB | 50 GB | ❌ | ✅ up to 1.5 TB |
+| M365 Business Standard | ✅ | 50 GB | 50 GB | ❌ | ✅ up to 1.5 TB |
+| M365 Business Premium | ✅ | 100 GB | 100 GB → 1.5 TB | ✅ | — |
+| M365 E1 | ✅ | 50 GB | 50 GB | ❌ | ✅ up to 1.5 TB |
+| M365 E3 | ✅ | 100 GB | 100 GB → 1.5 TB | ✅ | — |
+| M365 E5 | ✅ | 100 GB | 100 GB → 1.5 TB | ✅ | — |
+| Office 365 E1 | ✅ | 50 GB | 50 GB | ❌ | ✅ up to 1.5 TB |
+| Office 365 E3 | ✅ | 100 GB | 100 GB → 1.5 TB | ✅ | — |
+| Office 365 E5 | ✅ | 100 GB | 100 GB → 1.5 TB | ✅ | — |
 
-Licenses without native auto-expanding require the **Exchange Online Archiving** add-on (additional Microsoft license assigned to the account).
+> **Add-on:** *Exchange Online Archiving for Exchange Online* (~$3.00/user/month)  
+> **Auto-expanding archive:** starts at 100 GB and grows automatically up to ~1.5 TB per mailbox.  
+> Plans marked with ✅ under *Native Auto-Expanding* already include the add-on functionality — no extra license needed.
+
+> 📄 Source: [Exchange Online Archiving service description – Microsoft Learn](https://learn.microsoft.com/en-us/office365/servicedescriptions/exchange-online-archiving-service-description/exchange-online-archiving-service-description)
+
 
 ---
 
