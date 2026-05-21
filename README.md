@@ -2,6 +2,8 @@
 
 Interactive PowerShell script to enable and configure the In-Place Archive on Exchange Online, set a retention policy and immediately trigger archiving, no manual cmdlets needed.
 
+<img width="1000" height="538" alt="immagine" src="https://github.com/user-attachments/assets/752beb14-2cc4-418f-9a8f-8d43fd5c256b" />
+
 ---
 
 ## Requirements
