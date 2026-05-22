@@ -54,6 +54,7 @@ Fully interactive, no parameters required.
 - Creates the `MoveToArchive` Retention Tag with the chosen threshold
 - Creates the Retention Policy and links the tag
 - Assigns the policy to the mailbox
+- Remove the retention hold flag from the mailbox
 - Forces an immediate run of the Managed Folder Assistant
 
 > **Note:** If a Retention Tag or Policy already exists in the tenant it is reused, not duplicated. At most 6 fixed policies will exist in the tenant (one per threshold), shared across all mailboxes configured with the same threshold.
