@@ -337,6 +337,8 @@ try {
 }
 
 # 6e. Forza l'avvio immediato del Managed Folder Assistant
+Write-Step "Disattivo Retention Hold..."
+Set-Mailbox -Identity $mailbox.PrimarySmtpAddress -RetentionHoldEnabled $false
 Write-Step "Avvio immediato del Managed Folder Assistant (archiviazione forzata)..."
 try {
     Start-ManagedFolderAssistant -Identity $mailbox.PrimarySmtpAddress -ErrorAction Stop
@@ -367,6 +369,7 @@ try {
     Write-Host "  Nome archivio   : $($updatedMailbox.ArchiveName)" -ForegroundColor White
     Write-Host "  Retention policy: $($updatedMailbox.RetentionPolicy)" -ForegroundColor White
     Write-Host ""
+	Get-Mailbox $mailbox.PrimarySmtpAddress | fl RetentionHoldEnabled
 } catch {
     Write-Info "Impossibile recuperare il riepilogo finale: $_"
 }
