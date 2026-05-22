@@ -337,6 +337,8 @@ try {
 }
 
 # 6e. Force immediate run of the Managed Folder Assistant
+Write-Step "Disabling Retention Hold..."
+Set-Mailbox -Identity $mailbox.PrimarySmtpAddress -RetentionHoldEnabled $false
 Write-Step "Forcing immediate Managed Folder Assistant run (archiving triggered)..."
 try {
     Start-ManagedFolderAssistant -Identity $mailbox.PrimarySmtpAddress -ErrorAction Stop
@@ -367,6 +369,7 @@ try {
     Write-Host "  Archive name     : $($updatedMailbox.ArchiveName)" -ForegroundColor White
     Write-Host "  Retention policy : $($updatedMailbox.RetentionPolicy)" -ForegroundColor White
     Write-Host ""
+	Get-Mailbox $mailbox.PrimarySmtpAddress | fl RetentionHoldEnabled
 } catch {
     Write-Info "Unable to retrieve final summary: $_"
 }
